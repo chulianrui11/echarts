@@ -7,6 +7,7 @@ echarts 简单快速上手
 ## 内容
 ### 饼图
 data
-###直方图
+### 直方图
 data
+dataset
 
