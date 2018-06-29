@@ -2,9 +2,16 @@
 ### 饼图
 data
 ### 直方图
-data
+#### data
+x轴： 类目轴
+y轴： 数值轴
+#### dataset
 
-dataset
+优点：很多配置项不用专门配置就可以自动生成(legend tooltips)
+     数据可以被复用
+     不用为了规定的数据格式进行转化
+一般情况下，x轴会对应到dataset的第一列，每个系列会对应dataset中的每一列
+        
 ```js
 option = {
     legend: {},
@@ -31,3 +38,5 @@ option = {
     ]
 }
 ```
+
+dataset中的行列可以随意配置，具体配置参数seriesLayoutBy
