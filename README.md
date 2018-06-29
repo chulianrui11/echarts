@@ -11,7 +11,7 @@ data
 data
 dataset
 <p>
-‘’‘js
+```js
 option = {
     legend: {},
     tooltip: {},
@@ -36,4 +36,5 @@ option = {
         {type: 'bar'}
     ]
 }
+```
 </p>
