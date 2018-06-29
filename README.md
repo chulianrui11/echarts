@@ -10,6 +10,7 @@ data
 ### 直方图
 data
 dataset
+<p>
 ‘’‘js
 option = {
     legend: {},
@@ -35,3 +36,4 @@ option = {
         {type: 'bar'}
     ]
 }
+</p>
