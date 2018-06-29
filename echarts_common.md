@@ -12,6 +12,7 @@ y轴： 数值轴
    数据可以被复用  
    不用为了规定的数据格式进行转化  
 一般情况下，x轴会对应到dataset的第一列，每个系列会对应dataset中的每一列  
+数据格式： 二维数组、key-value,key-value并不支持seriesLayoutBy
         
 ```js
 option = {
