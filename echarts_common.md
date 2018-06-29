@@ -3,6 +3,7 @@
 data
 ### 直方图
 data
+
 dataset
 ```js
 option = {
