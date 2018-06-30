@@ -6,7 +6,7 @@ data
 x轴： 类目轴  
 y轴： 数值轴  
 Echarts4.0之前的数据格式
-```
+```js
 <!DOCTYPE html>
 <html>
 <head>
