@@ -5,6 +5,25 @@ data
 #### data
 x轴： 类目轴  
 y轴： 数值轴  
+Echarts4.0之前的数据格式
+```
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+```
+
+
 #### dataset
 
 优点：
@@ -13,6 +32,8 @@ y轴： 数值轴
    不用为了规定的数据格式进行转化  
 一般情况下，x轴会对应到dataset的第一列，每个系列会对应dataset中的每一列  
 数据格式： 二维数组、key-value,key-value并不支持seriesLayoutBy
+
+
         
 ```js
 option = {
