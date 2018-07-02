@@ -62,7 +62,7 @@ var option = {
     ]
 };
 ```
-visualMap可以有连续型和垂直型通过type: 'continuous'或者type: 'piecewise'来设置
+visualMap可以有连续型和垂直型通过type: 'continuous'或者type: 'piecewise'来设置<br>
 还有其他很多组件，比如拖拽功能http://www.echartsjs.com/gallery/editor.html?c=line-draggable<br>
 但是目前我在工作中还尚未涉及，这里就先不做介绍了
 
