@@ -145,5 +145,14 @@ xAxis: [{type: 'category', gridIndex: 0},
    
     ]
 ```
+##### dataset不仅支持x轴展示category，而且支持y轴展示category
 
+```js
+xAxis: [{gridIndex: 0},
+            {gridIndex: 1}],
+            
+    // 声明一个 Y 轴，数值轴。
+    yAxis: [{gridIndex: 0, type: 'category'},
+            {gridIndex: 1, type: 'category'}],
+```
 
