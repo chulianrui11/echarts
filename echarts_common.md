@@ -48,7 +48,7 @@ Echarts4.0之前的数据格式
 </html>
 ```
 一个最简单的直方图
-如果我们有二维数据呢，上面讲述的是销量，那么我们可能会将连续三年的销量做对比, 那么我们需要在series(系列)中再加入一组数据
+如果我们有二维数据呢，上面讲述的是销量，那么我们可能会将连续两年的销量做对比, 那么我们需要在series(系列)中再加入一组数据
 ```js
             {
                 name: '销量',
@@ -85,11 +85,13 @@ option = {
     dataset: {
         // 提供一份数据。
         source: [
-            ['product', '2015销量', '2016销量', '2017销量'],
-            ['衬衫', 43.3, 85.8, 93.7],
-            ['羊毛衫', 83.1, 73.4, 55.1],
-            ['雪纺衫', 86.4, 65.2, 82.5],
-            ['裤子', 72.4, 53.9, 39.1]
+            ['product', '2015销量', '2016销量', '2017销量', '2018销量'],
+            ['衬衫', 43, 85, 93, 99],
+            ['羊毛衫', 83, 73, 55, 67],
+            ['雪纺衫', 86, 65, 82, 98],
+            ['裤子', 72, 53, 39, 33],
+            ['高跟鞋', 27, 45, 46, 56],
+            ['袜子', 78, 63, 79, 45]
         ]
     },
     // 声明一个 X 轴，类目轴（category）。默认情况下，类目轴对应到 dataset 第一列。
@@ -100,11 +102,21 @@ option = {
     series: [
         {type: 'bar'},
         {type: 'bar'},
+        {type: 'bar'},
         {type: 'bar'}
     ]
 }
 ```
 可以看出来我们的series中少了name的配置和在legend中的配置，echarts会根据dataset中第一行识别legend,第一列识别x轴type
 ##### 现在我们又不想竖着看，我们想横着看
-dataset中的行列可以随意配置，具体配置参数seriesLayoutBy,以及xindex, yindex
+dataset中的行列可以随意配置，具体配置参数seriesLayoutBy，只需要将每一个系列的serieslayoutBy值设置为row(默认为column):
+```js
+series: [
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'}
+    ]
+```
+
 
