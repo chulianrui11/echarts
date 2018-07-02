@@ -104,5 +104,7 @@ option = {
     ]
 }
 ```
+可以看出来我们的series中少了name的配置和在legend中的配置，echarts会根据dataset中第一行识别legend,第一列识别x轴type
+##### 现在我们又不想竖着看，我们想横着看
+dataset中的行列可以随意配置，具体配置参数seriesLayoutBy,以及xindex, yindex
 
-dataset中的行列可以随意配置，具体配置参数seriesLayoutBy
