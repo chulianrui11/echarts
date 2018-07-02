@@ -144,6 +144,6 @@ xAxis: [{type: 'category', gridIndex: 0},
         {type: 'bar', xAxisIndex: 1, yAxisIndex: 1},
    
     ]
-    ```
+```
 
 
