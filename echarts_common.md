@@ -108,7 +108,7 @@ option = {
 }
 ```
 可以看出来我们的series中少了name的配置和在legend中的配置，echarts会根据dataset中第一行识别legend,第一列识别x轴type
-##### 现在我们又不想竖着看，我们想横着看
+##### 现在我们又不想让数据按列展示，我们想将数据按行展示
 dataset中的行列可以随意配置，具体配置参数seriesLayoutBy，只需要将每一个系列的serieslayoutBy值设置为row(默认为column):
 ```js
 series: [
@@ -118,5 +118,32 @@ series: [
         {type: 'bar', seriesLayoutBy: 'row'}
     ]
 ```
+如果想在一个页面上展示一个既按行展示又按列展示的
+```js
+xAxis: [{type: 'category', gridIndex: 0},
+            {type: 'category', gridIndex: 1}],
+            
+    // 声明一个 Y 轴，数值轴。
+    yAxis: [{gridIndex: 0},
+            {gridIndex: 1}],
+    grid: [
+        {bottom: '55%'},
+        {top: '55%'}
+    ],
+    // 声明多个 bar 系列，默认情况下，每个系列会自动对应到 dataset 的每一列。
+    series: [
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', xAxisIndex: 1, yAxisIndex: 1},
+        {type: 'bar', xAxisIndex: 1, yAxisIndex: 1},
+        {type: 'bar', xAxisIndex: 1, yAxisIndex: 1},
+        {type: 'bar', xAxisIndex: 1, yAxisIndex: 1},
+   
+    ]
+    ```
 
 
