@@ -156,3 +156,44 @@ xAxis: [{gridIndex: 0},
             {gridIndex: 1, type: 'category'}],
 ```
 
+### dimension和encode
+#### dimension(维度)
+上面的例子中如果series是按行展示的，则维度名是第一行（销量），如果是按列展示，则维度名是第二行（衣服类别）
+维度名和维度类型也可以自己指定，在dataset中加入一个dimension的选项，设置type值和name,不过一般情况下是不会用dimension设置维度名和type
+#### encode(数据到图形的映射)
+```js
+option = {
+    dataset: {
+        source: [
+            ['score', 'amount', 'product'],
+            [89.3, 58212, 'Matcha Latte'],
+            [57.1, 78254, 'Milk Tea'],
+            [74.4, 41032, 'Cheese Cocoa'],
+            [50.1, 12755, 'Cheese Brownie'],
+            [89.7, 20145, 'Matcha Cocoa'],
+            [68.1, 79146, 'Tea'],
+            [19.6, 91852, 'Orange Juice'],
+            [10.6, 101852, 'Lemon Juice'],
+            [32.7, 20112, 'Walnut Brownie']
+        ]
+    },
+    xAxis: {type: 'category'},
+    yAxis: {},
+    series: [
+        {
+            type: 'bar',
+            encode: {
+                // 将 "amount" 列映射到 X 轴。
+                x: 'product',
+                // 将 "product" 列映射到 Y 轴。
+                y: 'amount'
+            }
+        }
+    ]
+};
+```
+如果想让x轴和y轴互换，只需要将x轴和y轴的数据映射(encode)互换，然后将类目轴设置为y
+问题 seriesByLayout和encode各适用于什么场景？
+
+
+      
