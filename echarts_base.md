@@ -6,6 +6,7 @@ y轴： 数值轴<br>
 legend：图例<br>
 title: 表名称<br>
 series:数据系列<br>
+废话不多说，先上代码和图示
 Echarts4.0之前的数据格式
 ```js
 <!DOCTYPE html>
@@ -48,8 +49,10 @@ Echarts4.0之前的数据格式
 </body>
 </html>
 ```
-一个最简单的直方图
-如果我们有二维数据呢，上面讲述的是销量，那么我们可能会将连续两年的销量做对比, 那么我们需要在series(系列)中再加入一组数据
+上面展示的是一个最简单的直方图<br>
+在html中首先必须得有一个dom元素来存放我们的图表，这个dom元素必须得指定表格的宽高，否则不显示图表<br>
+大家可以看到一些基本的元素都在上面，比如title, legend(也可以不指定)， Xaxis, Yaxis, series<br> 
+##### 如果我们有二维数据呢，上面讲述的是销量，那么我们可能会将连续两年的销量做对比, 那么我们需要在series(系列)中再加入一组数据
 ```js
             {
                 name: '销量',
@@ -58,7 +61,7 @@ Echarts4.0之前的数据格式
             }
 ```
 ##### 加上一个系列的数据之后图例变没了
-在echarts中图例是用legend表示的，但是value是不能随便指定的，必须和series中的对应系列的name相同
+在echarts中图例是用legend表示的，但是对应的值是不能随便指定的，必须和series中的对应系列的name相同
 
 ##### 想要看到精确的提示数据，但是又不想把数据展示在图表上？
 如果我们想要精确的看到数据，可以使用tooltip选项，tooltip选项可以直接写{} echarts会自动给定默认值，我们也可以自己配置：
@@ -71,12 +74,11 @@ Echarts4.0之前的数据格式
 #### dataset
 
 优点：
-   很多配置项不用专门配置就可以自动生成(legend tooltips)  
-   数据可以被复用  
-   不用为了规定的数据格式进行转化  
-一般情况下，x轴会对应到dataset的第一列，每个系列会对应dataset中的每一列  
-数据格式： 二维数组、key-value,key-value并不支持seriesLayoutBy
-
+   很多配置项不用专门配置就可以自动生成(legend tooltips)<br>
+   数据可以被复用<br>
+   不用为了规定的数据格式进行转化<br>  
+默认情况下，x轴会对应到dataset的第一列，每个维度的数据会对应dataset中的除第一列的每一列<br>  
+数据格式： 二维数组、key-value（key-value并不支持seriesLayoutBy）<br>
 
         
 ```js
@@ -116,10 +118,12 @@ series: [
         {type: 'bar', seriesLayoutBy: 'row'},
         {type: 'bar', seriesLayoutBy: 'row'},
         {type: 'bar', seriesLayoutBy: 'row'},
+        {type: 'bar', seriesLayoutBy: 'row'}，
+        {type: 'bar', seriesLayoutBy: 'row'}，
         {type: 'bar', seriesLayoutBy: 'row'}
     ]
 ```
-如果想在一个页面上展示一个既按行展示又按列展示的
+##### 如果想在一个页面上展示一个既按行展示又按列展示的
 ```js
 xAxis: [{type: 'category', gridIndex: 0},
             {type: 'category', gridIndex: 1}],
