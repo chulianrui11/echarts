@@ -71,4 +71,7 @@ visualMap可以有连续型和垂直型通过type: 'continuous'或者type: 'piec
 ## 2.三维图
 echarts 支持三维图的展示，这里不再赘述，大家可以看官方文档<br>http://echarts.baidu.com/tutorial.html#%E4%BD%BF%E7%94%A8%20ECharts%20GL%20%E5%AE%9E%E7%8E%B0%E5%9F%BA%E7%A1%80%E7%9A%84%E4%B8%89%E7%BB%B4%E5%8F%AF%E8%A7%86%E5%8C%96
 
-
+几个三维比较直观的例子
+http://echarts.baidu.com/examples/editor.html?c=animating-contour-on-globe&gl=1
+http://echarts.baidu.com/examples/editor.html?c=bar3d-dataset&gl=1
+http://echarts.baidu.com/examples/editor.html?c=bar3d-simplex-noise&gl=1&theme=dark
