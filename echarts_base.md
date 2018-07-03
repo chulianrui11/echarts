@@ -198,7 +198,7 @@ option = {
 };
 ```
 如果想让x轴和y轴互换，只需要将x轴和y轴的数据映射(encode)互换，然后将类目轴设置为y<br>
-#### 问题 seriesByLayout和encode各适用于什么场景？
+
 
 
       
