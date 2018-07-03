@@ -1,11 +1,11 @@
 ### 直方图
 #### data
 一般情况下
-x轴： 类目轴  
-y轴： 数值轴 
-legend：图例
-title: 表名称
-series:数据系列
+x轴： 类目轴<br>  
+y轴： 数值轴<br>
+legend：图例<br>
+title: 表名称<br>
+series:数据系列<br>
 Echarts4.0之前的数据格式
 ```js
 <!DOCTYPE html>
