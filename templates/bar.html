@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block scripts %}
+<script type="text/javascript">
+   var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a}<br/>{b}: {c}"
+            },
+            legend: {
+                data:['2015销量', '2016销量']
+            },
+            xAxis: {
+                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '2015销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            },
+            {
+                name: '2016销量',
+                type: 'bar',
+                data: [8, 24, 43, 15, 15, 25]
+            }
+           ]
+        };  
+     var myChartOne = echarts.init(document.getElementById('chart'));
+     myChartOne.setOption(option);
+
+</script>
+{% endblock %}
