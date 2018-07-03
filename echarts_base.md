@@ -1,12 +1,12 @@
 ### 直方图
 #### data
 一般情况下
-x轴： 类目轴<br>  
-y轴： 数值轴<br>
+类目轴<br>  
+数值轴<br>
 legend：图例<br>
 title: 表名称<br>
 series:数据系列<br>
-废话不多说，先上代码和图示
+废话不多说，先上代码<br>
 Echarts4.0之前的数据格式
 ```js
 <!DOCTYPE html>
@@ -28,7 +28,6 @@ Echarts4.0之前的数据格式
             title: {
                 text: 'ECharts 入门示例'
             },
-            //tooltip: {},
             legend: {
                 data:['销量']
             },
@@ -50,7 +49,7 @@ Echarts4.0之前的数据格式
 </html>
 ```
 上面展示的是一个最简单的直方图<br>
-在html中首先必须得有一个dom元素来存放我们的图表，这个dom元素必须得指定表格的宽高，否则不显示图表<br>
+在html中首先必须得有一个dom元素来存放我们的图表，这个dom元素必须得指定表格的宽高，否则不显示<br>
 大家可以看到一些基本的元素都在上面，比如title, legend(也可以不指定)， Xaxis, Yaxis, series<br> 
 ##### 如果我们有二维数据呢，上面讲述的是销量，那么我们可能会将连续两年的销量做对比, 那么我们需要在series(系列)中再加入一组数据
 ```js
@@ -126,12 +125,12 @@ series: [
 ##### 如果想在一个页面上展示一个既按行展示又按列展示的
 ```js
 xAxis: [{type: 'category', gridIndex: 0},
-            {type: 'category', gridIndex: 1}],
+        {type: 'category', gridIndex: 1}],
             
-    // 声明一个 Y 轴，数值轴。
-    yAxis: [{gridIndex: 0},
-            {gridIndex: 1}],
-    grid: [
+// 声明一个 Y 轴，数值轴。
+yAxis: [{gridIndex: 0},
+        {gridIndex: 1}],
+grid: [
         {bottom: '55%'},
         {top: '55%'}
     ],
@@ -154,11 +153,11 @@ xAxis: [{type: 'category', gridIndex: 0},
 
 ```js
 xAxis: [{gridIndex: 0},
-            {gridIndex: 1}],
+        {gridIndex: 1}],
             
-    // 声明一个 Y 轴，数值轴。
-    yAxis: [{gridIndex: 0, type: 'category'},
-            {gridIndex: 1, type: 'category'}],
+// 声明一个 Y 轴， 类目轴
+yAxis: [{gridIndex: 0, type: 'category'},
+        {gridIndex: 1, type: 'category'}],
 ```
 
 ### dimension和encode
